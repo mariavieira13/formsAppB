@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>CADASTRAR PRODUTOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-card>
+    <ion-card-content>
+      <div class="corpo" [formGroup]="formCadprod">
+        <ion-list>
+          <ion-item>
+            <ion-label>Nome: </ion-label>
+            <ion-input placeholder="Insira o nome" type="name" formControlName="nome"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Descrição: </ion-label>
+            <ion-input placeholder="Insira uma descrição" type="text" formControlName="descricao"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Validade: </ion-label>
+            <ion-input placeholder="Insira a validade" type="date" formControlName="validade"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Preço: </ion-label>
+            <ion-input placeholder="Insira o preço" formControlName="preco"></ion-input>
+          </ion-item>
+        </ion-list>
+        </div>
+
+
+        <br>
+        <div>
+                <ion-button expand="block" routerLink="/home" color="dark" (click)="cadastrar()">Cadastrar</ion-button>
+                <ion-button expand="block" routerLink="/home" color="dark">Voltar</ion-button>
+        </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
